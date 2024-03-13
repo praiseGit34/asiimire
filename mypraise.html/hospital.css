@@ -1,0 +1,50 @@
+
+#p3{
+font-style: italics;
+}
+body{
+    font-style: normal;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    display:block;
+   
+}
+.navbar{
+ text-align: center;
+ background-color: rgb(224, 219, 229);
+}
+.navbar ul{
+    display: inline-flex;
+    list-style: none;
+    color: white;
+}
+.navbar ul li{
+    width:120px;
+    margin:15px;
+    padding:15px;
+    transition: 0.3s;
+   
+}
+.navbar ul li a{
+    text-decoration: none;
+    color:black;
+}
+.logo{
+    color: green;
+    text-align: left;
+    font-size: 40px;
+}
+.logo span{
+    color: var(--color-primary);
+
+}
+.navbar logo{
+    
+    color:var(--color-white);
+
+}
+.dropdown menu{
+    display:block;
+}

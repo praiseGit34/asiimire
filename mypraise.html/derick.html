@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!--<link rel="shortcut icon" href="../images/favicon.png" type="image/png">-->
+
+  <title>PCA Ltd</title>
+
+  <link rel="shortcut icon" href="https://pcuganda.com/assets/favicon.ico" />
+
+  <link rel="stylesheet" href="https://pcuganda.com/assets/back/lib/fontawesome/css/font-awesome.css">
+  <link rel="stylesheet" href="https://pcganda.com/assets/back/lib/weather-icons/css/weather-icons.css">
+
+  <link rel="stylesheet" href="https://pcuganda.com/assets/back/css/quirk.css">
+    
+    <script type="text/javascript" src="https://pcuganda.com/assets/back/js/payx.js"></script>
+
+  <script src="https://pcuganda.com/assets/back/lib/modernizr/modernizr.js"></script>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="../lib/html5shiv/html5shiv.js"></script>
+  <script src="../lib/respond/respond.src.js"></script>
+  <![endif]-->
+
+<script language="javascript"  type="text/javascript">var http = getHTTPObject(); // We create the HTTP Object</script></head>
+
+<body class="signwrapper">
+
+  <div class="sign-overlay"></div>
+
+  
+  <div class="signpanel" style="font-size: 2em; color: #ffffff; font-weight: 900; padding-top: 1em;">
+	  </div>
+
+  <div class="panel signin">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-sm-offset-2 col-sm-8"><img class="img-responsive" src="https://pcuganda.com/images/logo.png" alt="" /></div>
+      </div>
+      <!-- <h5 class="panel-title"></h5> -->
+    </div>
+    <div class="panel-body">
+
+      <p class="text-center"><strong>Institutions</strong></p>
+
+       
+
+                    
+  <form id="loginform" name="form1" method="post" action="https://pcuganda.com/admin/login" onsubmit="return  checkEmpty('companyid', 'Please search and select your company.') &&  checkEmpty('scusername', 'Please enter your username.') &&  checkEmpty('scpassword', 'Please enter your password.');" autocomplete="new-password">
+                  <div class="form-group" style="margin-bottom: 0px">
+          <div class="input-group">
+            <span class="input-group-addon"><a onkeypress="return handleEnter(this, event)"><i class="fa fa-briefcase"></i></a></span>
+            <input type="text" autocomplete="off" class="form-control" name="search" placeholder="Enter Company Name or ID" id="search" size="30" onkeyup="startInstantSearch('search', 'searchby', 'https://pcuganda.com/search/load_results/type/company')" onkeypress="return handleEnter(this, event)">
+
+            <div class="clear-both"></div>
+            <div>
+                <input name="searchby" type="hidden" id="searchby" value="companyname__displayid" />
+                <input name="layerid" type="hidden" id="layerid" value="searchresults" />
+                <input name="companyid" type="hidden" id="companyid" value="" />
+            </div>
+          </div>
+            <div class="input-group input-sm" style="z-index:1;">
+                <span id="searchresults" class="input-group input-sm" style="position:absolute;">&nbsp;</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input type="text" class="form-control" name="scusername" id="scusername" size="30" onkeypress="return handleEnterButton (this, event, 'logintable')" placeholder="Enter Username" style="z-index: 0 !important" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <input type="password" class="form-control" name="scpassword" id="scpassword" size="30" onkeypress="return handleEnterButton (this, event, 'logintable')" placeholder="Enter Password" style="z-index: 0 !important" autocomplete="new-password">
+          </div>
+        </div>
+        <!-- <div><a href="#" class="forgot">Forgot password?</a></div> -->
+        <div class="form-group">
+           <input name="loginbutton" class="btn btn-success btn-quirk btn-block" type="submit" id="loginbutton" value="Login" /> 
+        </div>
+      </form>
+
+	<div><center><a href="https://pcuganda.com/admin/forgot_password" class="forgot">Forgot password?</a></center></div>
+
+      <hr class="invisible">
+      <div class="form-group">
+        <a href="https://pcuganda.com/company_admin/index" class="btn btn-primary btn-quirk btn-stroke btn-stroke-thin btn-block">Login as a Vote&nbsp;&nbsp;<i class="fa fa-external-link"></i></a>
+      </div>
+
+      <div class="form-group">
+         <!-- <span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=hISTlMyUOr1AuAlqQlT83wGI404Oj5Mj5UBkNk6F9p3OFGx7zb0elrU6yufr"></script></span> -->
+      </div>
+    </div>
+  </div><!-- panel -->
+
+</body>
+<script src="https://pcuganda.com/assets/back/lib/jquery/jquery.js"></script>
+<script src="https://pcuganda.com/assets/back/lib/jquery-ui/jquery-ui.js"></script>
+<script src="https://pcuganda.com/assets/back/lib/bootstrap/js/bootstrap.js"></script>
+<script src="https://pcuganda.com/assets/back/lib/jquery-toggles/toggles.js"></script>
+
+
+
+<script src="https://pcuganda.com/assets/back/lib/datatables/jquery.dataTables.js"></script>
+<script src="https://pcuganda.com/assets/back/lib/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+<script src="https://pcuganda.com/assets/back/lib/select2/select2.js"></script>
+
+<!-- <script src="https://pcuganda.com/assets/back/lib/timepicker/jquery.timepicker.js"></script> -->
+<script src="https://pcuganda.com/assets/back/lib/timepicker/bootstrap-datepicker.js"></script>
+<script src="https://pcuganda.com/assets/back/lib/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+
+<script src="https://pcuganda.com/assets/back/js/quirk.js"></script>
+
+<script src="https://pcuganda.com/assets/back/izitoast/js/iziToast.min.js"></script>
+
+<script>
+$(document).ready(function() {
+
+  'use strict';
+
+  $('#dataTable1').DataTable();
+
+ $('#dataTable2').DataTable();
+
+  $('#suspendTable').DataTable({
+    "ordering": false
+  });
+
+  $('#susreport').DataTable({
+    "ordering" : false
+  });
+
+  // Select2
+  $('select').select2({ minimumResultsForSearch: Infinity });
+
+  $('.datepicker').datepicker({  	 
+        autoclose: true, 
+  });
+
+});
+</script>
+
+<script type="text/javascript">
+	$(function(){
+	  $('#datetimepicker1').datetimepicker({
+	  	minDate: new Date(),
+ 	  });
+	});
+</script>
+
+<script>
+    $(function(){
+
+        //button select all or cancel
+        $("#select-all").click(function () {
+            var all = $("input.select-all")[0];
+            all.checked = !all.checked
+            var checked = all.checked;
+            $("input.select-item").each(function (index,item) {
+                item.checked = checked;
+            });
+        });
+
+        //button select invert
+        $("#select-invert").click(function () {
+            $("input.select-item").each(function (index,item) {
+                item.checked = !item.checked;
+            });
+            checkSelected();
+        });
+
+        //button get selected info
+        $("#selected").click(function () {
+            var items=[];
+            $("input.select-item:checked:checked").each(function (index,item) {
+                items[index] = item.value;
+            });
+            if (items.length < 1) {
+                alert("no selected items!!!");
+            }else {
+                var values = items.join(',');
+                console.log(values);
+                var html = $("<div></div>");
+                html.html("selected:"+values);
+                html.appendTo("body");
+            }
+        });
+
+        //column checkbox select all or cancel
+        $("input.select-all").click(function () {
+            var checked = this.checked;
+            $("input.select-item").each(function (index,item) {
+                item.checked = checked;
+            });
+        });
+
+        //check selected items
+        $("input.select-item").click(function () {
+            var checked = this.checked;
+            console.log(checked);
+            checkSelected();
+        });
+
+        //check is all selected
+        function checkSelected() {
+            var all = $("input.select-all")[0];
+            var total = $("input.select-item").length;
+            var len = $("input.select-item:checked:checked").length;
+            console.log("total:"+total);
+            console.log("len:"+len);
+            all.checked = len===total;
+        }
+    });
+</script>
+<script>
+$(document).ready(function(){ 
+    $(".btn").click(function(){
+        $(this).button('loading').delay(20000).queue(function(){
+            $(this).button('reset');
+            $(this).dequeue();
+        });        
+    });
+});   
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        //setup - add a text input to each footer cell
+        $('#reconTable tfoot th').each(function(){
+            var title = $(this).text();
+            $(this).html('<input type="text" placeholder="Filter '+title+'" />');
+        });
+
+        //datatable
+        var table = $('#reconTable').DataTable(
+        {
+            "ordering": false
+        }
+        );
+
+        //apply the search
+        table.columns().every(function(){
+            var that = this;
+
+            $('input', this.footer() ).on('keyup change', function(){
+                if (that.search() !== this.value ) {
+                    that
+                    .search(this.value)
+                    .draw();
+                }
+            });
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+       
+        //datatable
+        var table = $('#resultTable').DataTable({
+            "ordering": false
+        });
+
+        
+    });
+</script>
+
+<script type="text/javascript">
+	function yesNoCheck(){
+		if(document.getElementById('ispaid_n').checked){
+		  document.getElementById('ifYes').style.visibility = 'visible';
+		}
+		else {
+		  document.getElementById('ifYes').style.visibility = 'hidden';
+		}
+	}
+</script>
+
+<script type="text/javascript">
+$('input.number').keyup(function(event){
+
+//skip for arrow keys
+if(event.which >= 37 && event.which <= 40){
+event.preventDefault();
+}
+
+$(this).val(function(index, value){
+	value = value.replace(/,/g,'');
+	return numberWithCommas(value);
+   });
+});
+
+function numberWithCommas(x){
+	var parts = x.toString().split(".");
+	parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	return parts.join(".");
+}
+</script>
+
+<script type="text/javascript">
+    </script>
+
+<script type="text/javascript">
+    </script>
+
+<script>
+    $(document).ready(function(){
+        $('#acceptForm button').click(function (ev){
+            ev.preventDefault()
+            if($(this).attr("value") == "reject"){
+                iziToast.warning({
+                    title: 'Notice!',
+                    message: "Terms rejected. Logging you out",
+                    position: 'topRight',
+                    timeout: false
+                });
+                setTimeout(function(){
+                    window.location.href = "https://pcuganda.com/admin/logout";
+                }, 5000);
+            }
+            if($(this).attr("value") == "accept"){
+                iziToast.success({
+                    title: 'Notice!',
+                    message: "Terms accepted. Logging you out",
+                    position: 'topRight',
+                    timeout: false
+                });
+
+                var userid = "";
+                // console.log(userid);
+                
+                $.ajax({
+                    url: "https://pcuganda.com/admin/accept_terms",
+                    type: "POST",
+                    data: { uid: userid },
+                    dataType: 'json',
+                    success: function(response){
+                        // console.log(response);
+                        setTimeout(function(){
+                            window.location.href = "https://pcuganda.com/admin/logout";
+                        }, 5000);
+                    }
+                });
+            }
+        });
+    });
+</script>
+<script>    
+        $(function () {
+            // flash auto hide
+            $('.alert').delay(6000).slideUp(500);
+            //$('.alert').not('.alert-danger, .alert-important').delay(6000).slideUp(500);
+        });
+</script>
+</html>

@@ -1,0 +1,39 @@
+img{
+    width: 20px;
+    height: 20px;
+}
+
+
+input{
+    height: 120px;
+}
+
+button 1{
+    height: 120px;
+    width: 150px;
+    background-color: red;
+    color: white;
+    font-family: italic;
+
+}
+button 2{
+    height:30px;
+    color:blue 
+}
+}{
+    img{
+        width:10px
+        height:15px
+        color:green
+    }
+}
+   button 3{
+    columns: unset;4
+    right:40 ;
+   }
+   {
+    ::placeholder
+    width:30px;
+    length:60px;
+    colour:red;
+   }
